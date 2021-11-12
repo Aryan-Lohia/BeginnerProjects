@@ -6,7 +6,7 @@
 
 void main()
 {
-  int **matrix, order, i, j;
+  int **matrix, order, i, j;                       //variables i and j help in loops
 
 #if 1 //To input order and matrix via a file
   
@@ -75,7 +75,7 @@ void main()
   printf("The Final output is:\n\n");
   for (i = 0; i <= (order / 2);i++)
   {
-    int f = 0,t=b;
+    int flag = 0,t=b;                                 //variable t indexes column when printing vertical sides of the design
     j = i;
     do
     {
@@ -83,7 +83,7 @@ void main()
       {
         for (int k = b; k >=i ;k--)
           print(matrix,j,k);
-        f = 1;
+        flag = 1;
         t = i;
       }
      else if(j==i)
@@ -94,7 +94,7 @@ void main()
      else
          print(matrix,j,t);
 
-     (f == 0) ? j++ : j--;
+     (flag == 0) ? j++ : j--;
     } while (j > i&&i<order/2);
 		
 		b--;

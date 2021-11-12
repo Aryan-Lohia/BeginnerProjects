@@ -15,7 +15,7 @@ void main()
   ptr = fopen("square_matrix.txt", "r");
 
   //Reading Matrix Order from File
-  fseek(ptr, 8, SEEK_SET);
+  fseek(ptr, 7, SEEK_SET);
   fscanf(ptr, "%s", s);
   order = atoi(s);
   printf("\n\nOrder of matrix : %d\n\n", order);

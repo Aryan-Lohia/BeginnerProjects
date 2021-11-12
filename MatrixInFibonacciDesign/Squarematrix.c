@@ -80,22 +80,25 @@ void main()
     do
     {
      if(j==b)
-     {
-       for (int k = b; k >=i ;k--)
-         print(a,j,k);
-       f = 1;
-       t = i;
-     }
-     else if(j==i)
-      { for (int k = i; k <= (b);k++)
+      {
+        for (int k = b; k >=i ;k--)
           print(a,j,k);
+        f = 1;
+        t = i;
       }
+     else if(j==i)
+      { 
+				for (int k = i; k <=b;k++)
+          print(a,j,k);
+			}
      else
          print(a,j,t);
+
      (f == 0) ? j++ : j--;
-    } while (j > i);
-    b--;
+    } while (j > i&&i<n/2);
+		
+		b--;
     
   }
   
-}
+} 
